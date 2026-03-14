@@ -1,0 +1,33 @@
+{
+  "name": "@zerokey/sdk",
+  "version": "0.1.0",
+  "description": "SolAuth — Signed HTTP Requests for Solana (ERC-8128 pattern)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@noble/hashes": "^1.7.1",
+    "@noble/ed25519": "^2.2.3",
+    "bs58": "^6.0.0"
+  },
+  "peerDependencies": {
+    "@solana/web3.js": "^1.87.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0",
+    "@solana/web3.js": "^1.98.0"
+  }
+}
